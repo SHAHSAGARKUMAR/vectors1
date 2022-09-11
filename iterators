@@ -1,0 +1,10 @@
+SIMILARITY OF ITERATOR AND POITER
+vector<int>v;                                                                 int a[5]={1,2,3,4,5}
+auto it=v.begin() //point to first element of vector                          int *p=a;
+//auto is used to detect any data type                                         
+
+cout<<*it //1
+*it++;
+cout<<*it //2
+
+MORE OR LESS IT IS SAME AS POINTERS
