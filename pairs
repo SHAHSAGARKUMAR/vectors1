@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+     pair<int,int>p;
+     //a container which store two datatype of int
+     pair<int,string>p;
+     //a container to store data type of int and string
+     pair<vector<int>v,int>p;
+     //container of vector of int datatye and int
+     
+          //example
+     pair<int,string>p={3,"sagar"};
+     cout<<p.first<<" "<<p.second<<endl;  //3 sagar
+     p.first=17;
+     cout<<p.first<<" "<<p.second<<endl;  //17 sagar
+     
+     pair<int,int>p[5]; //an array of 5 pairs
