@@ -1,0 +1,29 @@
+// MAPS
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    map<int,int> m;
+    // 1st is key wile second int represent value corresponding to it.  
+    
+    m[1]=3;   //TIME COMPLEXITY FOR INPUT IN MAP IS O(log(n))
+    m[0]=4;
+    m[4]=6;
+    m[5]=9;
+    m[2]=4;
+    for(auto it=m.begin();it != m.end();it++){
+        cout<<(*it).first<<" "<<(*it).second<<endl;    //AGAIN TIME COMPLEXITY IS O(log(n)) TO PRINT EACH OUTPUT.
+    }
+}
+
+// M.FIND()
+
+it retutn the value of iterator corresponding to the key
+auto it=m.find(0)  //TIME COMPLEXITY O(log(n)).
+// if it's not there in map it will retrun the end iterator.
+
+// similary 
+m.erase( input can be either value or iterator corresponding to that value )   // O(log(n)).
+auto it=m.find(key);
+m.erase(it);
