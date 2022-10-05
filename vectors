@@ -11,6 +11,13 @@ int main()
         cin>>x;
         v.push_back(x);
     }
+    // in vector we can directly copy one vectorto other without reference
+    
+    vector<int>v1=v;
+    // if we change any thing in v1 it will not reflect in v as w r not passing the adrss like in an array
+    
+    v>size() is used to know current size
+    
     sort(v.begin(),v.end());
      for(int i=0;i<n;i++){
          cout<<v[i];
@@ -18,3 +25,128 @@ int main()
 
     return 0;
 }
+
+//vector of pair
+
+#include <bits/stdc++.h>
+using namespace std;
+void print(vector<pair<int,int>> &v){
+    int size=v.size();
+    cout<<size<<endl;
+    for(int i=0;i<v.size();i++){
+        cout<<v[i].first<<" "<<v[i].second<<endl;
+    }
+}
+
+int main() {
+   
+   vector<pair<int,int>>v;
+   int n;
+   cin>>n;
+   for(int i=0;i<n;i++){
+       int x,y;
+       cin>>x>>y;
+       v.push_back({x,y});
+   }
+   print(v);
+   
+    return 0;
+}
+
+//array of vectors
+
+#include <bits/stdc++.h>
+using namespace std;
+void print(vector<int> &v){
+    int size=v.size();
+    cout<<size<<endl;
+    for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
+}
+
+int main() {
+   int N;
+   cin>>N;
+   vector<int>v[N];
+   for(int i=0;i<N;i++){
+       int n;
+       cin>>n;
+       for(int j=0;j<n;j++){
+           int x;
+           cin>>x;
+           v[i].push_back(x);
+       }
+   }
+   for(int i=0;i<N;i++){
+       print(v[i]);
+       cout<<endl;
+   }
+    return 0;           //in this it's like a 2d array in which no of rows is constant while no column is variable.
+}
+
+
+// vector of vector
+//vector<vector<int>>v
+// it is basically a 2D array with varible no of rowd and column.
+
+#include <bits/stdc++.h>
+using namespace std;
+void print(vector<int> &v){
+    int size=v.size();
+    cout<<size<<endl;
+    for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
+}
+
+int main() {
+   int N;
+   cin>>N;
+   vector<vector<int>>v;
+   for(int i=0;i<N;i++){
+       int n;
+       cin>>n;
+       vector<int>temp;
+       for(int j=0;j<n;j++){
+           int x;
+           cin>>x;
+           temp.push_back(x);
+       }
+       v.push_back(temp);
+   }
+   for(int i=0;i<v.size();i++){
+       print(v[i]);
+       cout<<endl;
+   }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
