@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+    int a[5]={1,4,6,8,9};
+
+    bool res=binary_search(a,a+5,3);
+    bool res1=binary_search(a,a+5,8);
+    
+    cout<<res<<" "<<res1<<endl;
+    
+    int ind=lower_bound(a,a+5,4)-a;  //result is min idex if it is ther in array
+    int ind1=lower_bound(a,a+5,10)-a; //if it is not ther it will give index of just greater element in array
+    int ind2=lower_bound(a,a+5,7)-a;
+    cout<<ind<<" "<<ind1<<" "<<ind2<<endl;
+    
+    int index=upper_bound(a,a+5,4)-a; //give iundex next to last occurence of4
+    int index1=upper_bound(a,a+5,7)-a; //if it is not ther it will give index of just greater element in array
+    cout<<index<<" "<<index1;
+    
+}
+
+// RESULT
+0 1
+1 5 3
+2 3
